@@ -1,3 +1,0 @@
-# Watermarking App
-
-this is a work in progress...
