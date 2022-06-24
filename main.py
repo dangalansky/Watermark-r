@@ -1,15 +1,23 @@
 from tkinter import *
+# from tkinter.ttk import *
 from PIL import ImageTk, Image
 from tkinter import filedialog, messagebox
 
 # ------------ GUI ------------- #
 window = Tk()
-window.title('Watermarking App!')
-window.config(padx=50, pady=50)
-
+window.title('Watermark\'R!')
+window.config()
+window.geometry('625x625')
+# style = Style()
+# style.configure('Button', background = '#FFE964')
 # ------------Background------------- #
-canvas = Canvas(height=200, width=50)
-canvas.grid(row=0, column=3)
+canvas = Canvas(height=625, width=625, bg='black', highlightthickness=0)
+background = Image.open('Watermarker App.png')
+background_sm = background.resize((740, 675), Image.ANTIALIAS)
+watermarker_app = ImageTk.PhotoImage(background_sm)
+
+canvas.create_image(280,310, image=watermarker_app)
+canvas.place(x=0, y=0)
 
 # ------------ Functions -------------#
 def open_watermark():
@@ -41,32 +49,26 @@ def create_watermark():
 
 
 
-watermark_label = Label(text='Watermark: ')
-watermark_label.grid(row=1, column=0)
+
 watermark = StringVar(None)
-watermark_entry = Entry(window, textvariable=watermark, width=30)
-watermark_entry.grid(row=1, column=1, pady=10)
-open_wtmrk = Button(window, text='Select File', command=open_watermark).grid(row=1, column=2)
+watermark_entry = Entry(window, textvariable=watermark, width=30, highlightthickness=0)
+watermark_entry.place(x=170, y=415)
+open_wtmrk = Button(window, text='Select', highlightthickness=0, borderwidth=0, highlightbackground='#FFE964', command=open_watermark).place(x=275, y=440)
 
 
 
-photo_label = Label(text='        Photo: ')
-photo_label.grid(row=2, column=0)
+
 photo = StringVar(None)
-photo_entry = Entry(window, textvariable=photo, width=30)
-photo_entry.grid(row=2, column=1, pady=10)
-open_photo = Button(window, text='Select File', command=open_photo).grid(row=2, column=2)
+photo_entry = Entry(window, textvariable=photo, width=30, highlightthickness=0)
+photo_entry.place(x=170, y=490)
+open_photo = Button(window, text='Select', highlightthickness=0, borderwidth=0, highlightbackground='#FFE964', command=open_photo).place(x=275, y=515)
 
 
-save_label = Label(text='Save Photo As:        ')
-save_label.grid(row=3, column=0)
+
 save_name = StringVar(None)
-save_name_entry = Entry(window, textvariable=save_name, width=30)
-save_name_entry.grid(row=3, column=1, pady=10)
-create_watermarked = Button(window, text='Save', command=create_watermark).grid(row=3, column=2)
-
+save_name_entry = Entry(window, textvariable=save_name, width=30, highlightthickness=0)
+save_name_entry.place(x=170, y=565)
+create_watermarked = Button(window, text='Save', highlightthickness=2, borderwidth=0, highlightbackground='#FFE964', command=create_watermark).place(x=277, y=590)
 
 
 window.mainloop()
-
-
