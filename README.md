@@ -1,3 +1,3 @@
-# Watermarking App
+# Watermark'R
 
-This is a work in progress...
+A desktop application that adds a pre-existing watermark to a photo and saves as a new file under the name of your choosing. 
