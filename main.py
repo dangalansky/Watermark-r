@@ -5,7 +5,6 @@ from tkinter import filedialog, messagebox
 # ------------ GUI ------------- #
 window = Tk()
 window.title('Watermark\'R!')
-window.config()
 window.geometry('625x625')
 
 # ------------Background------------- #
