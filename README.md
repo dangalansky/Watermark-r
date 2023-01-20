@@ -5,7 +5,11 @@ This is an updated version adding the use of the OpenCV library. The aim of this
  
 ## Usage, Photo Upload:
 Watermark should be a pre-existing photo, ideally 3 or less colors and in the .png format though .jpg should also work. Positioning of the watermark in this upgrade is more complicated to customize for the user than v1.0 thus, I have left that version available here. I have included two options in the GUI: upper left corner and bottom right corner. The positioning of the watermark is determined by slicing into the photo-as-array. The slice size is equal to the size of the watermark image. If the watermark photo is larger than the original, check the box to reduce size by 50%. That should correct the error you will receive. The final watermarked image will be saved into the working directory as a .png . 
- 
+ ![watermark-details-1](https://user-images.githubusercontent.com/97214702/213817965-fc686202-a079-43d4-aa36-928a42f1462b.png)<br>
+ ![watermark-details-2](https://user-images.githubusercontent.com/97214702/213817975-da6b6bf0-c96e-4932-80d9-ed3e57f997bd.png)<br>
+
+![watermark-details-3](https://user-images.githubusercontent.com/97214702/213817987-776be523-9c11-49f4-bc30-80b6215b6fcc.png)<br>
+
  ## GUI
  TKinter, all design and background images created by myself. Feel free to steal or destroy at will. 
  
